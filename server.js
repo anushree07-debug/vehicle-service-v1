@@ -13,6 +13,9 @@ const app = express();
 connectDB();
 
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Vehicle Service Management API is running successfully!");
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/customers", customerRoutes);
